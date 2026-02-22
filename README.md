@@ -571,14 +571,9 @@ EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
 EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
 EXPO_PUBLIC_FIREBASE_APP_ID=your_app_id
 ```
-
-> ⚠️ Nu adăuga niciodată `.env` în Git. Asigură-te că este în `.gitignore`.
-
 ---
 
 ## Ce urmează (Faza 2 — AI)
-
-Odată ce aplicația de bază funcționează și are date reale de la utilizatori din Chișinău, se pot adăuga:
 
 - **Predicție pericol pe oră** — model ML care prezice nivelul de pericol pe fiecare stradă în funcție de ora zilei, ziua săptămânii și istoricul incidentelor
 - **Scoring de siguranță pentru rute** — fiecare rută primește un scor 0-100 bazat pe incidentele de pe traseu și predicțiile AI
