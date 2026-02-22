@@ -17,6 +17,21 @@
 9. [Instalare și rulare locală](#instalare-si-rulare-locala)
 10. [Variabile de mediu](#variabile-de-mediu)
 11. [Ce urmează (Faza 2 — AI)](#ce-urmeaza-faza-2--ai)
+12. [Boilerplate (ce este deja implementat)](#boilerplate-ce-este-deja-implementat)
+
+---
+
+## Boilerplate (ce este deja implementat)
+
+Structura de bază a aplicației este pregătită ca **boilerplate**:
+
+- **Arhitectură:** documentată în [ARCHITECTURE.md](./ARCHITECTURE.md) — Expo Router, Firebase, Leaflet în WebView, Zustand.
+- **Auth:** Login / Înregistrare (email + parolă), persistare sesiune, logout, resetare parolă. Store `authStore` + `authService`.
+- **Navigare:** `app/index.tsx` redirecționează după autentificare; grupuri `(auth)` și `(tabs)` (Hartă, Raportează, Profil).
+- **Hartă:** componenta `LeafletMap` (WebView + Leaflet + OSM), centrat pe Chișinău; comunicare RN ↔ Leaflet prin `postMessage` / `injectJavaScript`.
+- **Firebase:** `services/firebase/config.ts` + `authService.ts`; variabile în `.env` (vezi `.env.example`).
+
+**Pași următori:** copiază `.env.example` în `.env`, completează credențialele Firebase, adaugă iconuri în `assets/`, apoi `npm install` și `npx expo start`. După aceea poți extinde: incidentService, ecran Raportează, OSRM, etc.
 
 ---
 
